@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="SanaSuperMarke">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Super Market Code/SanaSuperMarke/dist/SanaSuperMarke.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -349,8 +349,8 @@ public class User extends javax.swing.JFrame {
             txtname.requestFocus();
             txtstatus.setSelectedIndex(-1);
             try {
-                Class.forName("com.mysql.jdbc.Driver");
-                con = DriverManager.getConnection("jdbc:mysql://localhost/inventory","root","red");
+                Class.forName("java.sql.Driver");
+                con = DriverManager.getConnection("jdbc:mysql://localhost:3307/inventory", "root", "red");
                 
                 pst = con.prepareStatement("select * from user");
                 ResultSet rs;
@@ -397,8 +397,8 @@ public class User extends javax.swing.JFrame {
             String password = txtpassword.getText();
             String status = txtstatus.getSelectedItem().toString();
             
-            Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost/inventory","root","red");
+            Class.forName("java.sql.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3307/inventory", "root", "red");
             pst = con.prepareStatement("insert into user (Username,Password,Status)values(?,?,?)");
             pst.setString(1, username);
             pst.setString(2, password);
@@ -440,8 +440,8 @@ public class User extends javax.swing.JFrame {
         String status = txtstatus.getSelectedItem().toString();   
         
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost/inventory","root","red");
+            Class.forName("java.sql.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3307/inventory", "root", "red");
             pst = con.prepareStatement("update user set Username = ?,Password = ?,Status = ? where ID= ?");
             pst.setString(1, name);
             pst.setString(2, password);
@@ -479,7 +479,7 @@ public class User extends javax.swing.JFrame {
         if (dialogresult == JOptionPane.YES_OPTION)
         {
             try {
-                Class.forName("com.mysql.jdbc.Driver");
+                Class.forName("java.sql.Driver");
                 con = DriverManager.getConnection("jdbc:mysql://localhost/sana","root","");
                 pst = con.prepareStatement("delete from user where ID= ?");
                 pst.setInt(1, id);

@@ -489,8 +489,8 @@ public class pos extends javax.swing.JFrame {
     {
                 String name = txtcode.getText();
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost/inventory","root","red");
+            Class.forName("java.sql.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3307/inventory", "root", "red");
                 
             pst = con.prepareStatement("select * from product where Barcode =?");
             pst.setString(1, name);
@@ -557,8 +557,8 @@ public class pos extends javax.swing.JFrame {
         int insertid = 0;
         
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost/inventory","root","red");
+            Class.forName("java.sql.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3307/inventory", "root", "red");
             String query = "insert into sales (Date,User,Grandtotal,Cash,Balance)values(?,?,?,?,?)";
             pst = con.prepareStatement(query,Statement.RETURN_GENERATED_KEYS);
             pst.setString(1, date);
@@ -700,8 +700,8 @@ public class pos extends javax.swing.JFrame {
         {
             try {
                 String name = txtcode.getText();
-                Class.forName("com.mysql.jdbc.Driver");
-                con = DriverManager.getConnection("jdbc:mysql://localhost/inventory","root","red");
+                Class.forName("java.sql.Driver");
+                con = DriverManager.getConnection("jdbc:mysql://localhost:3307/inventory", "root", "red");
                 
                 pst = con.prepareStatement("select * from product where Barcode =?");
                 pst.setString(1, name);

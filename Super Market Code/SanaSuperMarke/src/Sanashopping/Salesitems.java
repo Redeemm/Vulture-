@@ -40,8 +40,8 @@ public class Salesitems extends javax.swing.JFrame {
     public void Connect()
     {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost/inventory","root","red");
+            Class.forName("java.sql.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3307/inventory", "root", "red");
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(Salesitems.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {

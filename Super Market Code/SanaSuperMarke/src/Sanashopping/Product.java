@@ -474,8 +474,8 @@ public class Product extends javax.swing.JFrame {
     public void category()
     {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost/inventory","root","red");
+            Class.forName("java.sql.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3307/inventory", "root", "red");
             pst = con.prepareStatement("select * from category");
             ResultSet rs;
             rs = pst.executeQuery();
@@ -497,8 +497,8 @@ public class Product extends javax.swing.JFrame {
     public void brand()
     {
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost/inventory","root","red");
+            Class.forName("java.sql.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3307/inventory", "root", "red");
             pst = con.prepareStatement("select * from brand");
             ResultSet rs;
             rs = pst.executeQuery();
@@ -525,8 +525,8 @@ public class Product extends javax.swing.JFrame {
             txtstatus.setSelectedIndex(-1);
 
             try {
-                Class.forName("com.mysql.jdbc.Driver");
-                con = DriverManager.getConnection("jdbc:mysql://localhost/inventory","root","red");
+                Class.forName("java.sql.Driver");
+                con = DriverManager.getConnection("jdbc:mysql://localhost:3307/inventory", "root", "red");
                 
                 pst = con.prepareStatement("select p.ID,p.Product,p.Description,c.Category,b.Brand,p.Cost_Price,p.Retail_Price,p.Quantity,p.Barcode,p.Status from Product p,category c,brand b where p.Cate_ID = c.id and p.Brand_ID = b.id");
                 ResultSet rs;
@@ -589,8 +589,8 @@ public class Product extends javax.swing.JFrame {
     try {
             // TODO add your handling code here:
                         
-            Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost/inventory","root","red");
+            Class.forName("java.sql.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3307/inventory","root","red");
             pst = con.prepareStatement("insert into product (Product,Description,Cate_ID,Brand_ID,Cost_Price,Retail_Price,Quantity,Barcode,Status)values(?,?,?,?,?,?,?,?,?)");
             pst.setString(1, product);
             pst.setString(2, desc);
@@ -641,8 +641,8 @@ public class Product extends javax.swing.JFrame {
             String barcode = txtbarcode.getText();
             String stat = txtstatus.getSelectedItem().toString();
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost/inventory","root","red");
+            Class.forName("java.sql.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3307/inventory","root","red");
             pst = con.prepareStatement("update product set Product = ?,Description = ?,Cate_ID = ?,Brand_ID = ?,Cost_Price = ?,Retail_Price = ?,Quantity = ?,Barcode = ?,Status = ? where ID= ?");
             pst.setString(1, product);
             pst.setString(2, desc);
@@ -706,8 +706,8 @@ public class Product extends javax.swing.JFrame {
         if (dialogresult == JOptionPane.YES_OPTION)
         {
             try {
-                Class.forName("com.mysql.jdbc.Driver");
-                con = DriverManager.getConnection("jdbc:mysql://localhost/inventory","root","red");
+                Class.forName("java.sql.Driver");
+                con = DriverManager.getConnection("jdbc:mysql://localhost:3307/inventory","root","red");
                 pst = con.prepareStatement("delete from product where ID= ?");
                 pst.setInt(1, id);
                 pst.executeUpdate();

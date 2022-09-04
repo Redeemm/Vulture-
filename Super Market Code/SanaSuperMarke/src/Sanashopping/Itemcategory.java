@@ -335,8 +335,8 @@ public class Itemcategory extends javax.swing.JFrame {
             txtcategory.requestFocus();
             txtstatus.setSelectedIndex(-1);
             try {
-                Class.forName("com.mysql.jdbc.Driver");
-                con = DriverManager.getConnection("jdbc:mysql://localhost/inventory","root","red");
+                Class.forName("java.sql.Driver");
+                con = DriverManager.getConnection("jdbc:mysql://localhost:3307/inventory", "root", "red");
                 
                 pst = con.prepareStatement("select * from category");
                 ResultSet rs;
@@ -381,8 +381,8 @@ public class Itemcategory extends javax.swing.JFrame {
             String cate = txtcategory.getText();
             String stat = txtstatus.getSelectedItem().toString();
             
-            Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost/inventory","root","red");
+            Class.forName("java.sql.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3307/inventory", "root", "red");
             pst = con.prepareStatement("insert into category (Category,Status)values(?,?)");
             pst.setString(1, cate);
             pst.setString(2, stat);
@@ -421,8 +421,8 @@ public class Itemcategory extends javax.swing.JFrame {
         String stat = txtstatus.getSelectedItem().toString();   
         
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost/inventory","root","red");
+            Class.forName("java.sql.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3307/inventory", "root", "red");
             pst = con.prepareStatement("update category set Category = ?,Status = ? where ID= ?");
             pst.setString(1, cate);
             pst.setString(2, stat);
@@ -458,8 +458,8 @@ public class Itemcategory extends javax.swing.JFrame {
         if (dialogresult == JOptionPane.YES_OPTION)
         {
             try {
-                Class.forName("com.mysql.jdbc.Driver");
-                con = DriverManager.getConnection("jdbc:mysql://localhost/inventory","root","red");
+                Class.forName("java.sql.Driver");
+                con = DriverManager.getConnection("jdbc:mysql://localhost:3307/inventory", "root", "red");
                 pst = con.prepareStatement("delete from category where ID= ?");
                 pst.setInt(1, id);
                 pst.executeUpdate();

@@ -9,19 +9,13 @@ import java.awt.Font;
 import java.awt.print.PrinterException;
 import javax.swing.table.TableModel;
 
-/**
- *
- * @author Afeeque
- */
+
 public class print extends javax.swing.JFrame {
 
-    /**
-     * Creates new form print
-     */
     public print() {
         initComponents();
     }
-       
+
     String grandtotal1;
     String cash1;
     String balance1;
@@ -54,12 +48,12 @@ public class print extends javax.swing.JFrame {
         txtprint.setText(txtprint.getText()+ "\t\t" + "Balance Given" +  "\t\t" + balance + "\n");
         txtprint.setText(txtprint.getText()+ "---------------------------------------------------------------------------------------------------\n");
         txtprint.setText(txtprint.getText()+ "------------------------------Thank You..!! Visit Again-----------------------------------\n");
-        
+
         txtprint.print();
-     
+
     }
- 
-   
+
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -131,7 +125,7 @@ public class print extends javax.swing.JFrame {
         print p = new print();
         this.hide();
         p.setVisible(false);
-        
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
@@ -141,7 +135,7 @@ public class print extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {

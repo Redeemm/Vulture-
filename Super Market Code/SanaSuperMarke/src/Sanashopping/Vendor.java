@@ -14,19 +14,18 @@ import java.sql.SQLException;
 import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author Afeeque
  */
-public class Salesuser extends javax.swing.JFrame {
+public class Vendor extends javax.swing.JFrame {
 
     /**
      * Creates new form Itemcategory
      */
-    public Salesuser() {
+    public Vendor() {
         initComponents();
         Connect();
         Load();
@@ -43,9 +42,9 @@ public class Salesuser extends javax.swing.JFrame {
             Class.forName("java.sql.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3307/inventory", "root", "red");
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(Salesuser.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Vendor.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
-            Logger.getLogger(Salesuser.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Vendor.class.getName()).log(Level.SEVERE, null, ex);
         }
         
     }
@@ -79,7 +78,7 @@ public class Salesuser extends javax.swing.JFrame {
             }
 
         } catch (SQLException ex) {
-            Logger.getLogger(Salesuser.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(Vendor.class.getName()).log(Level.SEVERE, null, ex);
         }
         
     }
@@ -438,13 +437,13 @@ public class Salesuser extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Salesuser.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Vendor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Salesuser.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Vendor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Salesuser.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Vendor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Salesuser.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Vendor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -458,7 +457,7 @@ public class Salesuser extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Salesuser().setVisible(true);
+                new Vendor().setVisible(true);
             }
         });
     }

@@ -14,7 +14,6 @@ import java.sql.SQLException;
 import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -359,7 +358,7 @@ public class Salesitems extends javax.swing.JFrame {
     
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
        // TODO add your handling code here:
-        Salesuser su = new Salesuser();
+        Vendor su = new Vendor();
         this.hide();
         su.setVisible(true);
     }//GEN-LAST:event_jButton13ActionPerformed

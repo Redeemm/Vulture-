@@ -65,7 +65,10 @@ public class collections {
     public String getDisplayType() {
         return displayType;
     }
-    /** queue****************************************************************************************/
+
+    /**
+     * queue
+     ****************************************************************************************/
 
     public void setDisplayType(String displayType) {
         this.displayType = displayType;
@@ -183,7 +186,7 @@ public class collections {
 /**********END ************************************ **/
 
 
-/********************** ADD******************/
+    /********************** ADD******************/
 
     public List<Product> getgood_list() {
         return listgood;
@@ -198,7 +201,8 @@ public class collections {
     public Map<Integer, Salesproduct> getSales() {
         return sales;
     }
-/*************  GET SALE RECORDS ******/
+
+    /*************  GET SALE RECORDS ******/
 
     public void storesale(int id, Salesproduct s) {
         sales.put(id, s);
@@ -208,7 +212,8 @@ public class collections {
     public HashMap<String, Vendor> Getvendors() {
         return venderdetails;
     }
-/*************** end of hashmap****/
+
+    /*************** end of hashmap****/
 
     public void removevendor(String n) {
         venderdetails.remove(n);
